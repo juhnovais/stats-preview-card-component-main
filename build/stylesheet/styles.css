@@ -1,0 +1,144 @@
+body {
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-height: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+body main {
+  background-color: hsl(244, 38%, 16%);
+  width: 100%;
+  margin: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column;
+}
+@media only screen and (min-width: 768px) {
+  body main {
+    flex-flow: row;
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: 1000px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body main section {
+    flex: 1;
+  }
+}
+body main .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  body main .img {
+    min-height: auto;
+  }
+}
+body main .img img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+body main .img img.imgDesktop {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  body main .img img.imgMobile {
+    display: none;
+  }
+  body main .img img.imgDesktop {
+    display: inherit;
+    min-height: 500px;
+    object-fit: cover;
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+body main .img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 64%, 23%);
+  opacity: 0.5;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+@media only screen and (min-width: 768px) {
+  body main .img::after {
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+body main .content {
+  text-align: center;
+  padding: 30px;
+}
+@media only screen and (min-width: 768px) {
+  body main .content {
+    text-align: left;
+    padding: 50px;
+  }
+}
+body main .content h1 {
+  color: hsl(0, 0%, 100%);
+  line-height: 1.4;
+  margin-top: 0;
+}
+@media only screen and (min-width: 768px) {
+  body main .content h1 {
+    font-size: 36px;
+  }
+}
+body main .content h1 span {
+  color: hsl(277, 64%, 61%);
+}
+body main .content p {
+  color: hsla(0, 0%, 100%, 0.6);
+  line-height: 1.6;
+}
+body main .content .stats {
+  display: flex;
+  flex-flow: column;
+  gap: 26px;
+  margin-top: 36px;
+}
+@media only screen and (min-width: 768px) {
+  body main .content .stats {
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+}
+body main .content .stats p {
+  margin: 0;
+  line-height: 1.5;
+}
+body main .content .stats p.statsNumber {
+  color: hsl(0, 0%, 100%);
+  font-size: 30px;
+  font-weight: 700;
+}
+body main .content .stats p.statsDesctiption {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=styles.css.map */
